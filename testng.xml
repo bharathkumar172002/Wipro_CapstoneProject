@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Guru99Banking suite">
+
+    <listeners>
+        <listener class-name="listeners.TestListener"/>
+    </listeners>
+
+    <test name="Guru99_Banking_Automation Tests" preserve-order="true">
+        <classes>
+            <class name="testcases.LoginTest"/>
+            <class name="testcases.CustomerTest"/>
+            <class name="testcases.CustomerValidationTest"/>
+            <class name="testcases.AccountTest"/>
+            <class name="testcases.AccountDetailsTest"/>
+            <class name="testcases.DepositTest"/>
+            <class name="testcases.WithdrawalTest"/>
+            <class name="testcases.FundTransferTest"/>
+            <class name="testcases.InvalidAccountTest"/>
+            <class name="testcases.InsufficientBalanceTest"/>
+        </classes>
+    </test>
+
+</suite>
