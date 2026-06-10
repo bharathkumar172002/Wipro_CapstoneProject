@@ -1,9 +1,11 @@
 package base;
 
+import java.lang.reflect.Method;
 import java.time.Duration;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import io.github.bonigarcia.wdm.WebDriverManager;
@@ -15,16 +17,16 @@ public class BaseTest {
     ConfigReader config = new ConfigReader();
 
     @BeforeMethod
-    public void setup() {
+    public void setup(Method method) {
         String browser = config.getBrowser();
         String url = config.getUrl();
+        String moduleName = this.getClass().getSimpleName().toUpperCase();
+        String testName = method.getName().toUpperCase();
 
-        System.out.println("\n╔" + "═".repeat(60) + "╗");
-        System.out.println("║ 🚀  STARTING EXECUTION                                 ║");
-        System.out.println("╠" + "═".repeat(60) + "╣");
-        System.out.println("║ 🌐  Browser: " + browser + "                                   ║");
-        System.out.println("║ 🔗  URL    : " + url + "          ║");
-        System.out.println("╚" + "═".repeat(60) + "╝\n");
+        System.out.println("\n┌──────────────────────────────────────────────────────────┐");
+        System.out.printf("│  %-56s  │%n", "MODULE : " + moduleName);
+        System.out.printf("│  %-56s  │%n", "TEST   : " + testName);
+        System.out.println("└──────────────────────────────────────────────────────────┘");
 
         if (browser == null || browser.equalsIgnoreCase("chrome")) {
             WebDriverManager.chromedriver().setup();
@@ -47,10 +49,11 @@ public class BaseTest {
     }
 
     @AfterMethod
-    public void tearDown() {
+    public void tearDown(ITestResult result) {
         if (driver != null) {
-            
+            String status = (result.isSuccess()) ? "PASSED ✅" : "FAILED ❌";
             System.out.println("\n🏁 [FINISHED] Test case execution completed.");
+            System.out.println("   RESULT: " + status);
             System.out.println("━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n");
         }
     }

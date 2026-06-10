@@ -2,154 +2,294 @@
 <testng-results ignored="0" total="12" passed="12" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2026-06-10T16:03:06 IST" name="Guru99Banking suite" finished-at="2026-06-10T16:05:21 IST" duration-ms="135543">
+  <suite started-at="2026-06-10T23:32:55 IST" name="Guru99Banking suite" finished-at="2026-06-10T23:35:12 IST" duration-ms="137616">
     <groups>
     </groups>
-    <test started-at="2026-06-10T16:03:06 IST" name="Guru99_Banking_Automation Tests" finished-at="2026-06-10T16:05:21 IST" duration-ms="135543">
+    <test started-at="2026-06-10T23:32:55 IST" name="Guru99_Banking_Automation Tests" finished-at="2026-06-10T23:35:12 IST" duration-ms="137616">
       <class name="testcases.InsufficientBalanceTest">
-        <test-method is-config="true" signature="setup()[pri:0, instance:testcases.InsufficientBalanceTest@21ca139c]" started-at="2026-06-10T16:05:10 IST" name="setup" finished-at="2026-06-10T16:05:13 IST" duration-ms="2452" status="PASS">
+        <test-method is-config="true" signature="setup(java.lang.reflect.Method)[pri:0, instance:testcases.InsufficientBalanceTest@226f885f]" started-at="2026-06-10T23:34:55 IST" name="setup" finished-at="2026-06-10T23:35:05 IST" duration-ms="9871" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void testcases.InsufficientBalanceTest.insufficientBalanceTest()]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="insufficientBalanceTest()[pri:0, instance:testcases.InsufficientBalanceTest@21ca139c]" started-at="2026-06-10T16:05:13 IST" name="insufficientBalanceTest" finished-at="2026-06-10T16:05:21 IST" duration-ms="8568" status="PASS">
+        <test-method signature="insufficientBalanceTest()[pri:0, instance:testcases.InsufficientBalanceTest@226f885f]" started-at="2026-06-10T23:35:05 IST" name="insufficientBalanceTest" finished-at="2026-06-10T23:35:12 IST" duration-ms="7134" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- insufficientBalanceTest -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:testcases.InsufficientBalanceTest@21ca139c]" started-at="2026-06-10T16:05:21 IST" name="tearDown" finished-at="2026-06-10T16:05:21 IST" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:testcases.InsufficientBalanceTest@226f885f]" started-at="2026-06-10T23:35:12 IST" name="tearDown" finished-at="2026-06-10T23:35:12 IST" duration-ms="4" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=insufficientBalanceTest status=SUCCESS method=InsufficientBalanceTest.insufficientBalanceTest()[pri:0, instance:testcases.InsufficientBalanceTest@226f885f] output={null}]]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- testcases.InsufficientBalanceTest -->
       <class name="testcases.AccountTest">
-        <test-method is-config="true" signature="setup()[pri:0, instance:testcases.AccountTest@1494b84d]" started-at="2026-06-10T16:03:47 IST" name="setup" finished-at="2026-06-10T16:04:03 IST" duration-ms="15867" status="PASS">
+        <test-method is-config="true" signature="setup(java.lang.reflect.Method)[pri:0, instance:testcases.AccountTest@34abdee4]" started-at="2026-06-10T23:33:32 IST" name="setup" finished-at="2026-06-10T23:33:39 IST" duration-ms="7356" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void testcases.AccountTest.createAccountTest()]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="createAccountTest()[pri:0, instance:testcases.AccountTest@1494b84d]" started-at="2026-06-10T16:04:03 IST" name="createAccountTest" finished-at="2026-06-10T16:04:13 IST" duration-ms="10250" status="PASS">
+        <test-method signature="createAccountTest()[pri:0, instance:testcases.AccountTest@34abdee4]" started-at="2026-06-10T23:33:39 IST" name="createAccountTest" finished-at="2026-06-10T23:33:57 IST" duration-ms="18182" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- createAccountTest -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:testcases.AccountTest@1494b84d]" started-at="2026-06-10T16:04:13 IST" name="tearDown" finished-at="2026-06-10T16:04:13 IST" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:testcases.AccountTest@34abdee4]" started-at="2026-06-10T23:33:57 IST" name="tearDown" finished-at="2026-06-10T23:33:57 IST" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=createAccountTest status=SUCCESS method=AccountTest.createAccountTest()[pri:0, instance:testcases.AccountTest@34abdee4] output={null}]]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- testcases.AccountTest -->
       <class name="testcases.CustomerValidationTest">
-        <test-method signature="validateCustomerId()[pri:0, instance:testcases.CustomerValidationTest@655a5d9c]" started-at="2026-06-10T16:03:47 IST" name="validateCustomerId" finished-at="2026-06-10T16:03:47 IST" duration-ms="2" status="PASS">
+        <test-method signature="validateCustomerId()[pri:0, instance:testcases.CustomerValidationTest@1494b84d]" started-at="2026-06-10T23:33:32 IST" name="validateCustomerId" finished-at="2026-06-10T23:33:32 IST" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- validateCustomerId -->
       </class> <!-- testcases.CustomerValidationTest -->
       <class name="testcases.FundTransferTest">
-        <test-method is-config="true" signature="setup()[pri:0, instance:testcases.FundTransferTest@77cf3f8b]" started-at="2026-06-10T16:04:42 IST" name="setup" finished-at="2026-06-10T16:04:44 IST" duration-ms="2020" status="PASS">
+        <test-method is-config="true" signature="setup(java.lang.reflect.Method)[pri:0, instance:testcases.FundTransferTest@1df98368]" started-at="2026-06-10T23:34:31 IST" name="setup" finished-at="2026-06-10T23:34:33 IST" duration-ms="2322" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void testcases.FundTransferTest.fundTransferTest()]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="fundTransferTest()[pri:0, instance:testcases.FundTransferTest@77cf3f8b]" started-at="2026-06-10T16:04:44 IST" name="fundTransferTest" finished-at="2026-06-10T16:04:51 IST" duration-ms="7324" status="PASS">
+        <test-method signature="fundTransferTest()[pri:0, instance:testcases.FundTransferTest@1df98368]" started-at="2026-06-10T23:34:33 IST" name="fundTransferTest" finished-at="2026-06-10T23:34:39 IST" duration-ms="5720" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- fundTransferTest -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:testcases.FundTransferTest@77cf3f8b]" started-at="2026-06-10T16:04:51 IST" name="tearDown" finished-at="2026-06-10T16:04:51 IST" duration-ms="2" status="PASS">
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:testcases.FundTransferTest@1df98368]" started-at="2026-06-10T23:34:39 IST" name="tearDown" finished-at="2026-06-10T23:34:39 IST" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=fundTransferTest status=SUCCESS method=FundTransferTest.fundTransferTest()[pri:0, instance:testcases.FundTransferTest@1df98368] output={null}]]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- testcases.FundTransferTest -->
       <class name="testcases.WithdrawalTest">
-        <test-method is-config="true" signature="setup()[pri:0, instance:testcases.WithdrawalTest@4628b1d3]" started-at="2026-06-10T16:04:22 IST" name="setup" finished-at="2026-06-10T16:04:32 IST" duration-ms="9536" status="PASS">
+        <test-method is-config="true" signature="setup(java.lang.reflect.Method)[pri:0, instance:testcases.WithdrawalTest@77cf3f8b]" started-at="2026-06-10T23:34:08 IST" name="setup" finished-at="2026-06-10T23:34:15 IST" duration-ms="6933" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void testcases.WithdrawalTest.withdrawalMoneyTest()]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="withdrawalMoneyTest()[pri:0, instance:testcases.WithdrawalTest@4628b1d3]" started-at="2026-06-10T16:04:32 IST" name="withdrawalMoneyTest" finished-at="2026-06-10T16:04:42 IST" duration-ms="9916" status="PASS">
+        <test-method signature="withdrawalMoneyTest()[pri:0, instance:testcases.WithdrawalTest@77cf3f8b]" started-at="2026-06-10T23:34:15 IST" name="withdrawalMoneyTest" finished-at="2026-06-10T23:34:31 IST" duration-ms="15548" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- withdrawalMoneyTest -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:testcases.WithdrawalTest@4628b1d3]" started-at="2026-06-10T16:04:42 IST" name="tearDown" finished-at="2026-06-10T16:04:42 IST" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:testcases.WithdrawalTest@77cf3f8b]" started-at="2026-06-10T23:34:31 IST" name="tearDown" finished-at="2026-06-10T23:34:31 IST" duration-ms="4" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=withdrawalMoneyTest status=SUCCESS method=WithdrawalTest.withdrawalMoneyTest()[pri:0, instance:testcases.WithdrawalTest@77cf3f8b] output={null}]]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- testcases.WithdrawalTest -->
       <class name="testcases.CustomerTest">
-        <test-method is-config="true" signature="setup()[pri:0, instance:testcases.CustomerTest@1b5bc39d]" started-at="2026-06-10T16:03:32 IST" name="setup" finished-at="2026-06-10T16:03:36 IST" duration-ms="3963" status="PASS">
+        <test-method is-config="true" signature="setup(java.lang.reflect.Method)[pri:0, instance:testcases.CustomerTest@655a5d9c]" started-at="2026-06-10T23:33:13 IST" name="setup" finished-at="2026-06-10T23:33:20 IST" duration-ms="6721" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void testcases.CustomerTest.createCustomerTest()]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="createCustomerTest()[pri:0, instance:testcases.CustomerTest@1b5bc39d]" started-at="2026-06-10T16:03:36 IST" name="createCustomerTest" finished-at="2026-06-10T16:03:47 IST" duration-ms="11251" status="PASS">
+        <test-method signature="createCustomerTest()[pri:0, instance:testcases.CustomerTest@655a5d9c]" started-at="2026-06-10T23:33:20 IST" name="createCustomerTest" finished-at="2026-06-10T23:33:32 IST" duration-ms="11760" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- createCustomerTest -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:testcases.CustomerTest@1b5bc39d]" started-at="2026-06-10T16:03:47 IST" name="tearDown" finished-at="2026-06-10T16:03:47 IST" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:testcases.CustomerTest@655a5d9c]" started-at="2026-06-10T23:33:32 IST" name="tearDown" finished-at="2026-06-10T23:33:32 IST" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=createCustomerTest status=SUCCESS method=CustomerTest.createCustomerTest()[pri:0, instance:testcases.CustomerTest@655a5d9c] output={null}]]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- testcases.CustomerTest -->
       <class name="testcases.DepositTest">
-        <test-method is-config="true" signature="setup()[pri:0, instance:testcases.DepositTest@71a9b4c7]" started-at="2026-06-10T16:04:13 IST" name="setup" finished-at="2026-06-10T16:04:17 IST" duration-ms="3573" status="PASS">
+        <test-method is-config="true" signature="setup(java.lang.reflect.Method)[pri:0, instance:testcases.DepositTest@4628b1d3]" started-at="2026-06-10T23:33:57 IST" name="setup" finished-at="2026-06-10T23:34:01 IST" duration-ms="4007" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void testcases.DepositTest.depositMoneyTest()]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="depositMoneyTest()[pri:0, instance:testcases.DepositTest@71a9b4c7]" started-at="2026-06-10T16:04:17 IST" name="depositMoneyTest" finished-at="2026-06-10T16:04:22 IST" duration-ms="5693" status="PASS">
+        <test-method signature="depositMoneyTest()[pri:0, instance:testcases.DepositTest@4628b1d3]" started-at="2026-06-10T23:34:01 IST" name="depositMoneyTest" finished-at="2026-06-10T23:34:08 IST" duration-ms="7018" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- depositMoneyTest -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:testcases.DepositTest@71a9b4c7]" started-at="2026-06-10T16:04:22 IST" name="tearDown" finished-at="2026-06-10T16:04:22 IST" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:testcases.DepositTest@4628b1d3]" started-at="2026-06-10T23:34:08 IST" name="tearDown" finished-at="2026-06-10T23:34:08 IST" duration-ms="2" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=depositMoneyTest status=SUCCESS method=DepositTest.depositMoneyTest()[pri:0, instance:testcases.DepositTest@4628b1d3] output={null}]]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- testcases.DepositTest -->
       <class name="testcases.LoginTest">
-        <test-method is-config="true" signature="setup()[pri:0, instance:testcases.LoginTest@6970140a]" started-at="2026-06-10T16:03:06 IST" name="setup" finished-at="2026-06-10T16:03:11 IST" duration-ms="4942" status="PASS">
+        <test-method is-config="true" signature="setup(java.lang.reflect.Method)[pri:0, instance:testcases.LoginTest@1cf2fed4]" started-at="2026-06-10T23:32:55 IST" name="setup" finished-at="2026-06-10T23:32:59 IST" duration-ms="4798" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void testcases.LoginTest.emptyLoginTest()]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="emptyLoginTest()[pri:0, instance:testcases.LoginTest@6970140a]" started-at="2026-06-10T16:03:11 IST" name="emptyLoginTest" finished-at="2026-06-10T16:03:12 IST" duration-ms="1074" status="PASS">
+        <test-method signature="emptyLoginTest()[pri:0, instance:testcases.LoginTest@1cf2fed4]" started-at="2026-06-10T23:32:59 IST" name="emptyLoginTest" finished-at="2026-06-10T23:33:00 IST" duration-ms="829" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- emptyLoginTest -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:testcases.LoginTest@6970140a]" started-at="2026-06-10T16:03:12 IST" name="tearDown" finished-at="2026-06-10T16:03:12 IST" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:testcases.LoginTest@1cf2fed4]" started-at="2026-06-10T23:33:00 IST" name="tearDown" finished-at="2026-06-10T23:33:00 IST" duration-ms="5" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=emptyLoginTest status=SUCCESS method=LoginTest.emptyLoginTest()[pri:0, instance:testcases.LoginTest@1cf2fed4] output={null}]]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setup()[pri:0, instance:testcases.LoginTest@6970140a]" started-at="2026-06-10T16:03:12 IST" name="setup" finished-at="2026-06-10T16:03:16 IST" duration-ms="3891" status="PASS">
+        <test-method is-config="true" signature="setup(java.lang.reflect.Method)[pri:0, instance:testcases.LoginTest@1cf2fed4]" started-at="2026-06-10T23:33:00 IST" name="setup" finished-at="2026-06-10T23:33:05 IST" duration-ms="4844" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void testcases.LoginTest.invalidLoginTest()]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="invalidLoginTest()[pri:0, instance:testcases.LoginTest@6970140a]" started-at="2026-06-10T16:03:16 IST" name="invalidLoginTest" finished-at="2026-06-10T16:03:17 IST" duration-ms="1207" status="PASS">
+        <test-method signature="invalidLoginTest()[pri:0, instance:testcases.LoginTest@1cf2fed4]" started-at="2026-06-10T23:33:05 IST" name="invalidLoginTest" finished-at="2026-06-10T23:33:06 IST" duration-ms="833" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- invalidLoginTest -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:testcases.LoginTest@6970140a]" started-at="2026-06-10T16:03:17 IST" name="tearDown" finished-at="2026-06-10T16:03:17 IST" duration-ms="3" status="PASS">
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:testcases.LoginTest@1cf2fed4]" started-at="2026-06-10T23:33:06 IST" name="tearDown" finished-at="2026-06-10T23:33:06 IST" duration-ms="3" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=invalidLoginTest status=SUCCESS method=LoginTest.invalidLoginTest()[pri:0, instance:testcases.LoginTest@1cf2fed4] output={null}]]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setup()[pri:0, instance:testcases.LoginTest@6970140a]" started-at="2026-06-10T16:03:17 IST" name="setup" finished-at="2026-06-10T16:03:20 IST" duration-ms="3176" status="PASS">
+        <test-method is-config="true" signature="setup(java.lang.reflect.Method)[pri:0, instance:testcases.LoginTest@1cf2fed4]" started-at="2026-06-10T23:33:06 IST" name="setup" finished-at="2026-06-10T23:33:10 IST" duration-ms="4055" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void testcases.LoginTest.validLoginTest()]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="validLoginTest()[pri:0, instance:testcases.LoginTest@6970140a]" started-at="2026-06-10T16:03:20 IST" name="validLoginTest" finished-at="2026-06-10T16:03:32 IST" duration-ms="11604" status="PASS">
+        <test-method signature="validLoginTest()[pri:0, instance:testcases.LoginTest@1cf2fed4]" started-at="2026-06-10T23:33:10 IST" name="validLoginTest" finished-at="2026-06-10T23:33:13 IST" duration-ms="3082" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- validLoginTest -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:testcases.LoginTest@6970140a]" started-at="2026-06-10T16:03:32 IST" name="tearDown" finished-at="2026-06-10T16:03:32 IST" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:testcases.LoginTest@1cf2fed4]" started-at="2026-06-10T23:33:13 IST" name="tearDown" finished-at="2026-06-10T23:33:13 IST" duration-ms="2" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=validLoginTest status=SUCCESS method=LoginTest.validLoginTest()[pri:0, instance:testcases.LoginTest@1cf2fed4] output={null}]]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- testcases.LoginTest -->
       <class name="testcases.InvalidAccountTest">
-        <test-method is-config="true" signature="setup()[pri:0, instance:testcases.InvalidAccountTest@1df98368]" started-at="2026-06-10T16:04:51 IST" name="setup" finished-at="2026-06-10T16:04:59 IST" duration-ms="7630" status="PASS">
+        <test-method is-config="true" signature="setup(java.lang.reflect.Method)[pri:0, instance:testcases.InvalidAccountTest@21ca139c]" started-at="2026-06-10T23:34:39 IST" name="setup" finished-at="2026-06-10T23:34:49 IST" duration-ms="10484" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void testcases.InvalidAccountTest.invalidAccountDepositTest()]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="invalidAccountDepositTest()[pri:0, instance:testcases.InvalidAccountTest@1df98368]" started-at="2026-06-10T16:04:59 IST" name="invalidAccountDepositTest" finished-at="2026-06-10T16:05:10 IST" duration-ms="11472" status="PASS">
+        <test-method signature="invalidAccountDepositTest()[pri:0, instance:testcases.InvalidAccountTest@21ca139c]" started-at="2026-06-10T23:34:49 IST" name="invalidAccountDepositTest" finished-at="2026-06-10T23:34:55 IST" duration-ms="5948" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- invalidAccountDepositTest -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:testcases.InvalidAccountTest@1df98368]" started-at="2026-06-10T16:05:10 IST" name="tearDown" finished-at="2026-06-10T16:05:10 IST" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:testcases.InvalidAccountTest@21ca139c]" started-at="2026-06-10T23:34:55 IST" name="tearDown" finished-at="2026-06-10T23:34:55 IST" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=invalidAccountDepositTest status=SUCCESS method=InvalidAccountTest.invalidAccountDepositTest()[pri:0, instance:testcases.InvalidAccountTest@21ca139c] output={null}]]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- testcases.InvalidAccountTest -->
       <class name="testcases.AccountDetailsTest">
-        <test-method signature="verifyAccountDetails()[pri:0, instance:testcases.AccountDetailsTest@34abdee4]" started-at="2026-06-10T16:04:13 IST" name="verifyAccountDetails" finished-at="2026-06-10T16:04:13 IST" duration-ms="2" status="PASS">
+        <test-method signature="verifyAccountDetails()[pri:0, instance:testcases.AccountDetailsTest@71a9b4c7]" started-at="2026-06-10T23:33:57 IST" name="verifyAccountDetails" finished-at="2026-06-10T23:33:57 IST" duration-ms="3" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyAccountDetails -->

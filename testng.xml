@@ -18,6 +18,7 @@
             <class name="testcases.FundTransferTest"/>
             <class name="testcases.InvalidAccountTest"/>
             <class name="testcases.InsufficientBalanceTest"/>
+           
         </classes>
     </test>
 

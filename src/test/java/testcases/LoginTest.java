@@ -8,9 +8,9 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
+import base.BaseTest;
 import POM.HomePage;
 import POM.LoginPage;
-import base.BaseTest;
 import utilities.ExcelUtils;
 import utilities.RetryAnalyzer;
 
@@ -20,16 +20,21 @@ public class LoginTest extends BaseTest {
     public void validLoginTest() {
 
        
-        String excelPath = "C:\\wipo_Capstone_Project\\LoginData.xlsx"; 
+        String excelPath = "C:\\wipo_Capstone_Project\\LoginGuru99.xlsx";
         
-        String username = ExcelUtils.getData(excelPath, 1, 0);
-        String password = ExcelUtils.getData(excelPath, 1, 1);
+        String username =
+                ExcelUtils.getData(excelPath, 1, 0);
 
-        LoginPage login = new LoginPage(driver);
+        String password =
+                ExcelUtils.getData(excelPath, 1, 1);
+
+        LoginPage login =
+                new LoginPage(driver);
 
         login.login(username, password);
 
-        HomePage home = new HomePage(driver);
+        HomePage home =
+                new HomePage(driver);
 
         Assert.assertTrue(
                 home.verifyManagerHomePage(),
@@ -39,44 +44,79 @@ public class LoginTest extends BaseTest {
     @Test
     public void invalidLoginTest() {
 
-        LoginPage login = new LoginPage(driver);
+        LoginPage login =
+                new LoginPage(driver);
 
-        login.login("wrongUser", "wrongPass");
+        login.login(
+                "wrongUser",
+                "wrongPass");
 
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        WebDriverWait wait =
+                new WebDriverWait(
+                        driver,
+                        Duration.ofSeconds(10));
 
-        Alert alert = wait.until(ExpectedConditions.alertIsPresent());
+        Alert alert =
+                wait.until(
+                        ExpectedConditions
+                        .alertIsPresent());
 
-        String actualMessage = alert.getText();
-        String expectedMessage = "User or Password is not valid";
+        String actualMessage =
+                alert.getText();
 
-        System.out.println("Expected = " + expectedMessage);
-        System.out.println("Actual = " + actualMessage);
+        String expectedMessage =
+                "User or Password is not valid";
 
-        Assert.assertTrue(actualMessage.contains(expectedMessage));
+        System.out.println(
+                "Expected = "
+                        + expectedMessage);
+
+        System.out.println(
+                "Actual = "
+                        + actualMessage);
+
+        Assert.assertTrue(
+                actualMessage.contains(
+                        expectedMessage));
 
         alert.accept();
     }
-
     @Test
     public void emptyLoginTest() {
 
-        LoginPage login = new LoginPage(driver);
+        LoginPage login =
+                new LoginPage(driver);
 
         try {
+
             login.login("", "");
 
-            String alertText = driver.switchTo().alert().getText();
+            String alertText =
+                    driver.switchTo()
+                          .alert()
+                          .getText();
 
-            System.out.println("Expected = User or Password is not valid");
-            System.out.println("Actual = " + alertText);
+            System.out.println(
+                    "Expected = User or Password is not valid");
 
-            Assert.assertTrue(alertText.contains("User or Password is not valid"));
+            System.out.println(
+                    "Actual = "
+                            + alertText);
 
-            driver.switchTo().alert().accept();
+            Assert.assertTrue(
+                    alertText.contains(
+                            "User or Password is not valid"));
+
+            driver.switchTo()
+                  .alert()
+                  .accept();
 
         } catch (Exception e) {
-            System.out.println("Application behaviour for empty login: " + e.getMessage());
+
+            System.out.println(
+                    "Application behaviour for empty login: "
+                            + e.getMessage());
+
             Assert.assertTrue(true);
         }
     }
