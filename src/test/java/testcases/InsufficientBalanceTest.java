@@ -35,6 +35,13 @@ public class InsufficientBalanceTest extends BaseTest {
 	                TestData.accountId2,
 	                "100000");
 
+	        // Pehle alert handle karein agar aata hai
+	        try {
+	            driver.switchTo().alert().accept();
+	        } catch (Exception alertEx) {
+	            // Alert nahi mila, aage badhein
+	        }
+
 	        String pageText =
 	                driver.findElement(
 	                        By.tagName("body"))
@@ -60,15 +67,13 @@ public class InsufficientBalanceTest extends BaseTest {
 	            System.out.println(
 	                    "Transfer Blocked Successfully");
 	        }
+	        
+	        // Logout Test Case
+	        driver.findElement(By.linkText("Log out")).click();
+	        driver.switchTo().alert().accept();
+	        System.out.println("Logout Successful");
 
 	    } catch(Exception e) {
-
-	       
-	        try {
-	            driver.switchTo().alert().accept();
-	        } catch (Exception alertEx) {
-	          
-	        }
 
 	        System.out.println(
 	                "Insufficient Balance Test Executed");
