@@ -13,31 +13,17 @@ public class DepositPage {
         this.driver = driver;
     }
 
-    By depositLink =
-            By.linkText("Deposit");
-
-    By accountNo =
-            By.name("accountno");
-
-    By amount =
-            By.name("ammount");
-
-    By description =
-            By.name("desc");
-
-    By submit =
-            By.name("AccSubmit");
-
-    public void depositMoney(
-            String accNo,
-            String amt) {
-
-    	WaitUtils.waitForElement(
-    	        driver,
-    	        depositLink)
-    	        .click();
-
-        driver.findElement(accountNo)
+    By depositLink = By.linkText("Deposit");
+    By accountNo =By.name("accountno");
+   By amount = By.name("ammount");
+   By description =By.name("desc");
+   By submit =By.name("AccSubmit");
+             
+    public void depositMoney( String accNo, String amt) {
+    		
+    	WaitUtils.waitForElement( driver, depositLink)
+        .click();
+    	driver.findElement(accountNo)
                 .sendKeys(accNo);
 
         driver.findElement(amount)

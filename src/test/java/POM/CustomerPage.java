@@ -5,11 +5,11 @@ import org.openqa.selenium.WebDriver;
 import utilities.TestData;
 import utilities.WaitUtils;
 
-public class NewCustomerPage {
+public class CustomerPage {
 
     WebDriver driver;
 
-    public NewCustomerPage(WebDriver driver) {
+    public CustomerPage(WebDriver driver) {
         this.driver = driver;
     }
 
@@ -29,38 +29,38 @@ public class NewCustomerPage {
     By submitBtn = By.name("sub");
 
     public void addCustomer() {
-
-    	WaitUtils.waitForElement(
-    	        driver,
-    	        newCustomerLink)
-    	        .click();
+    WaitUtils.waitForElement(driver, newCustomerLink).click();
+    							
+    	       
 //*********************************************************************************************
   //*********************************************************************************************
-    	driver.findElement(customerName)
-                .sendKeys("Bharath kumar");
+    	driver.findElement(customerName) .sendKeys("Bharath kumar");
+
+              
 
         driver.findElement(gender).click();
 
-        driver.findElement(dob)
-                .sendKeys("01-07-2002");
+        driver.findElement(dob) .sendKeys("01-07-2002");
+               
 
-        driver.findElement(address)
-                .sendKeys("Delhi");
+        driver.findElement(address) .sendKeys("Delhi");
+               
 
-        driver.findElement(city)
-                .sendKeys("Greater Noida");
+        driver.findElement(city) .sendKeys("Greater Noida");
 
-        driver.findElement(state)
-                .sendKeys("Delhi");
+               
 
-        driver.findElement(pin)
-                .sendKeys("201306");
+        driver.findElement(state).sendKeys("Delhi");
+              
 
-        driver.findElement(mobile)
-                .sendKeys("7295015459");
+        driver.findElement(pin) .sendKeys("201306");
+             
 
-        driver.findElement(email)
-                .sendKeys("bharath"
+        driver.findElement(mobile).sendKeys("7295015459");
+              
+
+        driver.findElement(email) .sendKeys("bharath"
+             
                         + System.currentTimeMillis()
                         + "@gmail.com");
 

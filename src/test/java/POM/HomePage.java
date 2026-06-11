@@ -10,13 +10,8 @@ public class HomePage {
     public HomePage(WebDriver driver) {
         this.driver = driver;
     }
-
-    By managerText =
-            By.xpath("//td[contains(text(),'Manger Id')]");
-
+    By managerText =  By.xpath("//td[contains(text(),'Manger Id')]");
     public boolean verifyManagerHomePage() {
-
-        return driver.findElement(managerText)
-                     .isDisplayed();
+    return driver.findElement(managerText) .isDisplayed();
     }
 }

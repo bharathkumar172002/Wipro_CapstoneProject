@@ -12,7 +12,7 @@ import POM.WithdrawalPage;
 import utilities.ConfigReader;
 import utilities.TestData;
 
-public class FundTransferNegativeTest
+public class NegativeTest
         extends BaseTest {
 
     @Test

@@ -4,7 +4,7 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import POM.LoginPage;
-import POM.NewCustomerPage;
+import POM.CustomerPage;
 import base.BaseTest;
 import utilities.ConfigReader;
 import utilities.TestData;
@@ -25,8 +25,8 @@ public class CustomerTest extends BaseTest {
                 config.getUsername(),
                 config.getPassword());
 
-        NewCustomerPage customer =
-                new NewCustomerPage(driver);
+        CustomerPage customer =
+                new CustomerPage(driver);
 
         customer.addCustomer();
         WaitUtils.waitForText(
