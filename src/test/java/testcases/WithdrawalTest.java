@@ -9,71 +9,47 @@ import POM.WithdrawalPage;
 import base.BaseTest;
 import utilities.ConfigReader;
 import utilities.TestData;
-import utilities.WaitUtils;
 
 public class WithdrawalTest extends BaseTest {
 
-	@Test
-	public void withdrawalMoneyTest() {
+    // ---------------------------------------------------------
+    // TEST CASES
+    // ---------------------------------------------------------
 
-	    ConfigReader config =
-	            new ConfigReader();
+    @Test(description = "Verify withdrawal functionality and update account balance")
+    public void withdrawalMoneyTest() {
 
-	    LoginPage login =
-	            new LoginPage(driver);
+        // ---------------------------------------------------------
+        // Initialization
+        // ---------------------------------------------------------
+        ConfigReader config = new ConfigReader();
+        LoginPage login = new LoginPage(driver);
+        WithdrawalPage withdrawal = new WithdrawalPage(driver);
 
-	    login.login(
-	            config.getUsername(),
-	            config.getPassword());
+        // ---------------------------------------------------------
+        // Execution
+        // ---------------------------------------------------------
+        login.login(config.getUsername(), config.getPassword());
+        withdrawal.withdrawMoney(TestData.accountId1, "500");
 
-	    WithdrawalPage withdrawal =
-	            new WithdrawalPage(driver);
+        // ---------------------------------------------------------
+        // Validation & Logging
+        // ---------------------------------------------------------
+        try {
+            String pageText = driver.findElement(By.tagName("body")).getText();
 
-	    withdrawal.withdrawMoney(
-	            TestData.accountId1,
-	            "500");
+            if (pageText.contains("Transaction details of Withdrawal")) {
+                TestData.account1Balance -= 500;
+                
+                System.out.println(">>> INFO: Withdrawal Amount = 500");
+                System.out.println(">>> DATA: Current Balance = " + TestData.account1Balance);
+            } else {
+                System.err.println(">>> BUG: Withdrawal Validation Failed - Confirmation not displayed");
+            }
+        } catch (Exception e) {
+            System.err.println(">>> BUG: Withdrawal Page Issue - " + e.getMessage());
+        }
 
-	    try {
-
-	        String pageText =
-	                driver.findElement(
-	                        By.tagName("body"))
-	                        .getText();
-
-	        if(pageText.contains(
-	                "Transaction details of Withdrawal")) {
-
-	            TestData.account1Balance =
-	                    TestData.account1Balance - 500;
-
-	            System.out.println(
-	                    "Withdrawal Amount = 500");
-
-	            System.out.println(
-	                    "Current Account Balance = "
-	                            + TestData.account1Balance);
-
-	        } else {
-
-	            System.out.println(
-	                    "BUG FOUND : Withdrawal Validation Failed");
-
-	            System.out.println(
-	                    "Expected Result : Withdrawal Successful");
-
-	            System.out.println(
-	                    "Actual Result : Confirmation page not displayed");
-	        }
-
-	    } catch(Exception e) {
-
-	        System.out.println(
-	                "BUG FOUND : Withdrawal Page Issue");
-
-	        System.out.println(
-	                e.getMessage());
-	    }
-
-	    Assert.assertTrue(true);
-	}
+        Assert.assertTrue(true);
+    }
 }

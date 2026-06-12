@@ -5,13 +5,25 @@ import org.openqa.selenium.WebDriver;
 
 public class HomePage {
 
-    WebDriver driver;
+    
+    private WebDriver driver;
 
+    // =========================================================================
+    //LOCATORS
+    // =========================================================================
+    private By managerText = By.xpath("//td[contains(text(),'Manger Id')]");
+
+    // =========================================================================
+    // CONSTRUCTOR
+    // =========================================================================
     public HomePage(WebDriver driver) {
         this.driver = driver;
     }
-    By managerText =  By.xpath("//td[contains(text(),'Manger Id')]");
+
+    // =========================================================================
+    // ACTIONS
+    // =========================================================================
     public boolean verifyManagerHomePage() {
-    return driver.findElement(managerText) .isDisplayed();
+        return driver.findElement(managerText).isDisplayed();
     }
 }

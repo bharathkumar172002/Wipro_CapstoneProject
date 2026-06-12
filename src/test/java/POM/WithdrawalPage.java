@@ -4,58 +4,41 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-
 import utilities.WaitUtils;
 
 public class WithdrawalPage {
 
-    WebDriver driver;
+    private WebDriver driver;
 
+    // =========================================================================
+    // LOCATORS
+    // =========================================================================
+    private By withdrawalLink = By.linkText("Withdrawal");
+    private By accountNo      = By.name("accountno");
+    private By amount         = By.name("ammount");
+    private By description    = By.name("desc");
+    private By submit         = By.name("AccSubmit");
+
+    // =========================================================================
+    // CONSTRUCTOR
+    // =========================================================================
     public WithdrawalPage(WebDriver driver) {
         this.driver = driver;
     }
 
-    By withdrawalLink =
-            By.linkText("Withdrawal");
-
-    By accountNo =
-            By.name("accountno");
-
-    By amount =
-            By.name("ammount");
-
-    By description =
-            By.name("desc");
-
-    By submit =
-            By.name("AccSubmit");
-
-    public void withdrawMoney(
-            String accNo,
-            String amt) {
-    	WebElement withdrawal =
-    	        WaitUtils.waitForElement(
-    	                driver,
-    	                withdrawalLink);
-
-    	JavascriptExecutor js =
-    	        (JavascriptExecutor) driver;
-
-    	js.executeScript(
-    	        "arguments[0].click();",
-    	        withdrawal);
-        driver.findElement(accountNo)
-                .sendKeys(accNo);
-
-        driver.findElement(amount)
-                .sendKeys(amt);
-
-        driver.findElement(description)
-                .sendKeys("Withdraw");
-
-        WaitUtils.waitForElement(
-                driver,
-                submit)
-                .click();
+    // =========================================================================
+    // ACTIONS
+    // =========================================================================
+    public void withdrawMoney(String accNo, String amt) {
+        WebElement withdrawal = WaitUtils.waitForElement(driver, withdrawalLink);
+        
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        js.executeScript("arguments[0].click();", withdrawal);
+        
+        driver.findElement(accountNo).sendKeys(accNo);
+        driver.findElement(amount).sendKeys(amt);
+        driver.findElement(description).sendKeys("Withdraw");
+        
+        WaitUtils.waitForElement(driver, submit).click();
     }
 }

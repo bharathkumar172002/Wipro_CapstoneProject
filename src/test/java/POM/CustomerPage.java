@@ -38,49 +38,22 @@ public class CustomerPage {
 
               
 
-        driver.findElement(gender).click();
-
-        driver.findElement(dob) .sendKeys("01-07-2002");
-               
-
-        driver.findElement(address) .sendKeys("Delhi");
-               
-
-        driver.findElement(city) .sendKeys("Greater Noida");
-
-               
-
-        driver.findElement(state).sendKeys("Delhi");
-              
-
-        driver.findElement(pin) .sendKeys("201306");
+       driver.findElement(gender).click();
+       driver.findElement(dob) .sendKeys("01-07-2002");
+       driver.findElement(address) .sendKeys("Delhi");
+       driver.findElement(city) .sendKeys("Greater Noida");
+       driver.findElement(state).sendKeys("Delhi");
+       driver.findElement(pin) .sendKeys("201306");
+       driver.findElement(mobile).sendKeys("7295015459");
+       driver.findElement(email) .sendKeys("bharath" + System.currentTimeMillis()  + "@gmail.com");
+       driver.findElement(password) .sendKeys("Bharath123");
              
+       WaitUtils.waitForElement(  driver, submitBtn) .click();
+       
+       String customerId =driver.findElement(By.xpath("//td[text()='Customer ID']/following-sibling::td")).getText();
+       TestData.customerId = customerId;
+       System.out.println("Generated Customer ID = "+ customerId);
 
-        driver.findElement(mobile).sendKeys("7295015459");
-              
-
-        driver.findElement(email) .sendKeys("bharath"
-             
-                        + System.currentTimeMillis()
-                        + "@gmail.com");
-
-        driver.findElement(password)
-                .sendKeys("Bharath123");
-
-        WaitUtils.waitForElement(
-                driver,
-                submitBtn)
-                .click();
-        
-        String customerId =
-        		driver.findElement(
-        		By.xpath("//td[text()='Customer ID']/following-sibling::td"))
-        		.getText();
-
-        		TestData.customerId = customerId;
-
-        		System.out.println(
-        		"Generated Customer ID = "
-        		+ customerId);
+        		
     }
 }

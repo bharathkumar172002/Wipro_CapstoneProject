@@ -1,18 +1,15 @@
-<!DOCTYPE suite SYSTEM
-"https://testng.org/testng-1.0.dtd">
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 
-<suite name="Guru99NegativeSuite">
+<suite name="Guru99_Negative_Automation_Suite" thread-count="1" parallel="none">
 
     <listeners>
-
         <listener class-name="listeners.TestListener"/>
-
     </listeners>
 
-    <test name="Negative Tests">
-
+    <test name="Functional_Negative_Tests">
         <classes>
-
+            
             <class name="testcases.LoginTest">
                 <methods>
                     <include name="invalidLoginTest"/>
@@ -21,9 +18,8 @@
             </class>
 
             <class name="testcases.FundTransferNegativeTest"/>
-
+            
         </classes>
-
     </test>
 
 </suite>

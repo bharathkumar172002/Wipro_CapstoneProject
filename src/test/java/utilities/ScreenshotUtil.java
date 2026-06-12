@@ -10,27 +10,18 @@ import org.openqa.selenium.WebDriver;
 
 public class ScreenshotUtil {
 
-    public static void captureScreenshot(
-            WebDriver driver,
-            String fileName) {
+    // ---------------------------------------------------------
+    // METHODS
+    // ---------------------------------------------------------
 
-        File src =
-                ((TakesScreenshot) driver)
-                        .getScreenshotAs(
-                                OutputType.FILE);
+    public static void captureScreenshot(WebDriver driver, String fileName) {
+        File src = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
 
         try {
-
-            FileUtils.copyFile(
-                    src,
-                    new File(
-                            "./screenshots/"
-                                    + fileName
-                                    + ".png"));
-
+            FileUtils.copyFile(src, new File("./screenshots/" + fileName + ".png"));
+            System.out.println(">>> INFO: Screenshot captured: " + fileName);
         } catch (IOException e) {
-
-            e.printStackTrace();
+            System.err.println(">>> ERROR: Unable to capture screenshot: " + e.getMessage());
         }
     }
 }

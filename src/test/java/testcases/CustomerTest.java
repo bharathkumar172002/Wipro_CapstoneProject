@@ -12,38 +12,27 @@ import utilities.WaitUtils;
 
 public class CustomerTest extends BaseTest {
 
+    // =========================================================================
+    // TEST CASES
+    // =========================================================================
+
     @Test
     public void createCustomerTest() {
+        ConfigReader config = new ConfigReader();
+        LoginPage login = new LoginPage(driver);
+        CustomerPage customer = new CustomerPage(driver);
 
-        ConfigReader config =
-                new ConfigReader();
+        // Login
+        login.login(config.getUsername(), config.getPassword());
 
-        LoginPage login =
-                new LoginPage(driver);
-
-        login.login(
-                config.getUsername(),
-                config.getPassword());
-
-        CustomerPage customer =
-                new CustomerPage(driver);
-
+        // Perform Action
         customer.addCustomer();
-        WaitUtils.waitForText(
-                driver,
-                "Customer Registered Successfully");
+        WaitUtils.waitForText(driver, "Customer Registered Successfully");
 
-        Assert.assertTrue(
-                driver.getPageSource()
-                      .contains(
-                              "Customer Registered Successfully"));
-   
-        System.out.println(
-                "Customer ID = "
-                + TestData.customerId);
-
-        Assert.assertNotNull(
-                TestData.customerId);
+        // Verification
+        Assert.assertTrue(driver.getPageSource().contains("Customer Registered Successfully"));
         
+        System.out.println("Customer ID = " + TestData.customerId);
+        Assert.assertNotNull(TestData.customerId);
     }
 }

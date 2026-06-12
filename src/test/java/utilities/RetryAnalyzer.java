@@ -3,24 +3,23 @@ package utilities;
 import org.testng.IRetryAnalyzer;
 import org.testng.ITestResult;
 
-public class RetryAnalyzer
-        implements IRetryAnalyzer {
+public class RetryAnalyzer implements IRetryAnalyzer {
 
-    int count = 0;
+    // ---------------------------------------------------------
+    // FIELDS
+    // ---------------------------------------------------------
+    private int count = 0;
+    private static final int MAX_RETRY = 2;
 
-    int maxRetry = 2;
-
+    // ---------------------------------------------------------
+    // OVERRIDDEN METHODS
+    // ---------------------------------------------------------
     @Override
-    public boolean retry(
-            ITestResult result) {
-
-        if (count < maxRetry) {
-
+    public boolean retry(ITestResult result) {
+        if (count < MAX_RETRY) {
             count++;
-
             return true;
         }
-
         return false;
     }
 }
