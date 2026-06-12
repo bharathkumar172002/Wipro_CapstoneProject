@@ -30,15 +30,15 @@ public class FundTransferTest extends BaseTest {
         System.out.println("From Account: " + TestData.accountId1);
         System.out.println("To Account: " + TestData.accountId2);
 
-        transfer.transferFunds(TestData.accountId1, TestData.accountId2, "200");
+        transfer.transferFunds(TestData.accountId1, TestData.accountId2, "300");
 
         // ---------------------------------------------------------
         // Data Verification & Logging
         // ---------------------------------------------------------
-        TestData.account1Balance -= 200;
-        TestData.account2Balance += 200;
+        TestData.account1Balance -= 300;
+        TestData.account2Balance += 300;
 
-        System.out.println("Transfer Amount: 200");
+        System.out.println("Transfer Amount: 300");
         System.out.println("Sender Balance: " + TestData.account1Balance);
         System.out.println("Receiver Balance: " + TestData.account2Balance);
 

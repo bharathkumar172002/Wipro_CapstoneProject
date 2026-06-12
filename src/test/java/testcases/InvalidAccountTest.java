@@ -28,7 +28,7 @@ public class InvalidAccountTest extends BaseTest {
         // Execution
         // ---------------------------------------------------------
         login.login(config.getUsername(), config.getPassword());
-        deposit.depositMoney("99999999", "500");
+        deposit.depositMoney("77777777", "1000");
 
         // ---------------------------------------------------------
         // Validation & Logging

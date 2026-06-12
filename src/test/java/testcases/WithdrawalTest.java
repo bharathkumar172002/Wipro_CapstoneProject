@@ -30,7 +30,7 @@ public class WithdrawalTest extends BaseTest {
         // Execution
         // ---------------------------------------------------------
         login.login(config.getUsername(), config.getPassword());
-        withdrawal.withdrawMoney(TestData.accountId1, "500");
+        withdrawal.withdrawMoney(TestData.accountId1, "400");
 
         // ---------------------------------------------------------
         // Validation & Logging
@@ -41,7 +41,7 @@ public class WithdrawalTest extends BaseTest {
             if (pageText.contains("Transaction details of Withdrawal")) {
                 TestData.account1Balance -= 500;
                 
-                System.out.println(">>> INFO: Withdrawal Amount = 500");
+                System.out.println(">>> INFO: Withdrawal Amount = 400");
                 System.out.println(">>> DATA: Current Balance = " + TestData.account1Balance);
             } else {
                 System.err.println(">>> BUG: Withdrawal Validation Failed - Confirmation not displayed");

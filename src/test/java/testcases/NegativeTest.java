@@ -46,7 +46,7 @@ public class NegativeTest extends BaseTest {
         login.login(config.getUsername(), config.getPassword());
 
         try {
-            transfer.transferFunds(TestData.accountId1, TestData.accountId2, "100000");
+            transfer.transferFunds(TestData.accountId1, TestData.accountId2, "110000");
             System.out.println(">>> DATA: " + driver.findElement(By.tagName("body")).getText());
         } catch (Exception e) {
             System.out.println(">>> ERROR: Insufficient Balance Test Executed - " + e.getMessage());
@@ -64,7 +64,7 @@ public class NegativeTest extends BaseTest {
         login.login(config.getUsername(), config.getPassword());
 
         try {
-            withdrawal.withdrawMoney(TestData.accountId1, "100000");
+            withdrawal.withdrawMoney(TestData.accountId1, "110000");
             System.out.println(">>> INFO: Negative Test - Excess Withdrawal");
             System.out.println(">>> DATA: " + driver.findElement(By.tagName("body")).getText());
         } catch (Exception e) {
@@ -83,7 +83,7 @@ public class NegativeTest extends BaseTest {
         login.login(config.getUsername(), config.getPassword());
 
         try {
-            deposit.depositMoney("777777777", "500");
+            deposit.depositMoney("777777777", "400");
             System.out.println(" Negative Test - Invalid Account Deposit");
             System.out.println("DATA: " + driver.findElement(By.tagName("body")).getText());
         } catch (Exception e) {

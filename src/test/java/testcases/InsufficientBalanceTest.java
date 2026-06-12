@@ -32,7 +32,7 @@ public class InsufficientBalanceTest extends BaseTest {
         login.login(config.getUsername(), config.getPassword());
 
         try {
-            transfer.transferFunds(TestData.accountId1, TestData.accountId2, "100000");
+            transfer.transferFunds(TestData.accountId1, TestData.accountId2, "110000");
 
             // Handle potential alert
             try {
